@@ -1,0 +1,10 @@
+
+    <div class=" row border border-dark" style="margin:20px;padding:10px;background-color:white; height:auto; ">
+          <div *ngFor='let noz of numberOfQuest'[ngStyle]="{backgroundColor:vvv(noz.status)}" 
+                                             
+          class=" border border-dark  "  style=" margin: 10px;border-radius:50%;height:50px;width:50px">
+            <div class="container-fluid "  style="margin:auto;"><h2 style="color: rgb(36, 86, 224);">{{noz.no}}</h2></div>
+          </div>
+       
+    </div>
+
