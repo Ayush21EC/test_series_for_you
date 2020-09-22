@@ -1,0 +1,39 @@
+    <style>
+        ::placeholder{color: black;}
+    </style>
+    <div style='height:300px;background-color: transparent;'>
+        <div class='col-md-6 m-auto'>
+            <button type="button"class="btn btn-outline-light"(click)="loginz()">Login</button>
+            <button type="button" class="btn btn-outline-light"(click)='singUPZ()'>SingUp</button>
+
+        </div >
+        <div class='col-md-7 m-auto'>
+            <div class='container ' [hidden]="!ilogin" style=' padding:10px;'>
+               <h4>Login</h4>
+                <input type='text' [(ngModel)]='namez' style="background-color: transparent;border-bottom:2px solid white;border-top: none;border-left: none;border-right: none;"
+                    placeholder="Name"><br>
+                <input type='text' [(ngModel)]='passwordz'
+            style="border-top: none;border-left: none;background-color: transparent; border-right: none;border-bottom:2px solid white; " placeholder="Password">
+                    <br>
+                    <button type="button" class="btn btn-outline-danger"(click)="SubmitLoginz()">Submit</button>
+
+                <br>
+                <p style='color:red'>{{status}}</p>
+            </div>
+
+            <div class='container ' [hidden]="!Singup" style=' padding:10px;'>
+                <h4>Regester</h4>
+                <input type='text' [(ngModel)]='namez' style=" background-color: transparent;border-bottom:2px solid white;border-top: none;border-left: none;border-right: none;"
+                    placeholder="Name"><br>
+                <input type='text' [(ngModel)]='emailz' style="background-color: transparent;border-bottom:2px solid white;border-top: none;border-left: none;border-right: none;"
+                    placeholder="e-mail"><br>
+                <input type='text' [(ngModel)]='passwordz'
+                    style="background-color: transparent;border-bottom:2px solid white;border-top: none;border-left: none;border-right: none;" placeholder="Password">
+                <br>
+                <br>
+                <div class='col-md-6 ml-0'>
+                    <button class="btn btn-outline-danger"(click)='SingupDB()'>Submit</button>
+                    </div>
+            </div>
+        </div>
+    </div>
