@@ -1,0 +1,172 @@
+<style>
+    @media screen and (max-width:3000px) and (min-width:600px) {
+        .aqw {
+            padding: auto;
+            padding-top: 100px;
+            height: 650px;
+            width: 500px
+        }
+
+        .contai {
+            border: 1px solid rgb(151, 101, 55);
+            height: 370px;
+            padding-top: 40px;
+        }
+
+        .marginzz {
+            margin: auto
+        }
+
+        .routingz {
+            width: 200px
+        }
+
+    }
+
+    @media screen and (max-width:600px) and (min-width:0px) {
+        .buttondiv {
+            padding-left: auto;
+            padding-right: 0px
+        }
+
+        .routingz {
+
+            width: 150px
+        }
+
+
+        .aqw {
+            height: 300px;
+            width: 100%;
+            margin-bottom: 90px
+        }
+        .insideContai
+        {
+            height: 320px;
+            width: 320px; 
+            margin:auto;
+            margin-top: 20px;
+        }
+
+        .contai {
+
+
+            border: 1px solid rgb(151, 101, 55);
+            height: 350px;
+            width: 350px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .notidfyz1 {
+            width: 230px;
+            margin: auto;
+        }
+
+        .marginzz {
+            height: 200px;
+            width: 100%;
+        }
+
+     
+
+        
+
+       
+    }
+    .containerzv {
+            width: 200px;
+            margin: auto;
+        }
+    .inputz {
+            background-color: transparent;
+            color: black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+    .notidfyz {
+        width: 170px;
+        margin: auto;
+    }
+    .inp {
+            margin-top: 20px;
+            padding: auto;
+        }
+    .headz {
+        width: 70px
+    }
+</style>
+
+
+
+
+
+<div class='container-fluid aqw '>
+    <div class='contai   '>
+        <div class='insideContai'>
+            <div class='routingz  m-auto row'>
+                <button type="button" class="btn btn-outline-primary btn-rounded waves-effect  mr-1"
+                    (click)="loginz()">Login</button>
+                <button type="button" class="btn btn-outline-primary btn-rounded waves-effect  ml-1"
+                    (click)='singUPZ()'>SingUp</button>
+
+            </div>
+            <br>
+            <div class='col-md-7  marginzz'>
+                <div class='containerzv ' [hidden]="!ilogin">
+
+                    <h2 class="m-auto  headz">Login</h2>
+
+                    <div class='inp container-fluid'>
+
+                        <input type='text' class='inputz' [(ngModel)]='namez' placeholder="Name"><br>
+                        <input type='text' class='inputz' [(ngModel)]='passwordz' placeholder="Password">
+                    </div><br>
+
+
+                    <div class='container-fluid'>
+                        <div style='width:65px ;margin:auto'>
+                            <button type="button" class="btn btn-outline-primary btn-rounded waves-effect  "
+                                (click)="SubmitLoginz()">Login</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <div class='containerzv ' [hidden]="!Singup">
+
+                    <h2 class="m-auto  headz">Regester</h2>
+
+
+
+                    <div class='inp container-fluid'>
+                        <input type='text' class='inputz' [(ngModel)]='namez' placeholder="Name"><br>
+                        <input class='inputz' type='text' [(ngModel)]='emailz' placeholder="e-mail"><br>
+                        <input class='inputz' type='text' [(ngModel)]='passwordz' placeholder="Password">
+                    </div>
+                    <br>
+                    <div class='container-fluid'>
+                        <div style='width:65px ;margin:auto'>
+                            <button type="button" class="btn btn-outline-primary btn-rounded waves-effect  "
+                                (click)="SingupDB()">Singup</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class='m-auto notidfyz1'>
+                <h4 style='color:red'>
+                    {{status}}
+                </h4>
+            </div>
+            <div class=' notidfyz ' *ngIf='seconds'>
+                <h4 style="color: red;">You hnave to log in first</h4>
+            </div>
+        </div>
+    </div>
+</div>
