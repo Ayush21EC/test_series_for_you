@@ -1,0 +1,42 @@
+<style>
+    @media screen and (max-width:600px) and (min-width:0px) {
+        .az {
+            width: 100%
+        }
+    }
+</style>
+<br>
+<div class='text-center'>
+    <h1>Reasoning Results</h1>
+</div>
+<hr style="width:50%">
+
+<div class='container-fluid '>
+
+    <div class="col-md-7 m-auto chart-wrapper" style='margin-bottom:50px;height:auto'>
+        
+                    <div class="container-fluid" >
+                                    <div class='row m-auto'style='width:200px'>
+                                                        <div style='background-color:rgb(82, 11, 122); width:30px;height:20px ;'> </div>
+                                                        <h3>Results of test paper 1</h3>
+                                    </div>
+                                    <div class='row m-auto'style='width:200px'>
+                                                    <div style='background-color:rgb(31, 170, 180); width:30px;height:20px ; '> </div>
+                                                    <h3>Results of test paper 1</h3>
+                                    </div>
+                                    <div class='row m-auto'style='width:200px'>
+                                                        <div style='background-color:rgb(143, 113, 32) ; width:30px;height:20px ;'></div>
+                                                        <h3>Results of test paper 1</h3>
+                                    </div>
+                    </div>
+    </div>
+
+
+
+    <div class="col-md-7 m-auto">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+            [plugins]="lineChartPlugins">
+        </canvas>
+    </div>
+</div>
