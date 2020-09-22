@@ -1,0 +1,66 @@
+
+<style>
+     @media  screen and (max-width: 900px){
+        .MainSub
+        {
+            width:170px;
+            margin:10px
+        }
+     
+     }
+     @media  screen and (min-width: 900px)
+        {
+            .MainSub{
+            width:250px;
+            margin:auto;
+            margin-top:50px
+            }
+        }
+</style>
+<div class='h-auto'>
+    <div class=' row container-fluid'
+        style='height:610px;background-image: url("./assets/images/im1.jpg");background-repeat: no-repeat;background-size: 100% 100%;'>
+        <div class=' col-md-7 '>
+        </div>
+        <div class=' col-md-6   ' style='background-color:transparent; margin-right:100px'>
+            <app-login-in-home></app-login-in-home>
+        </div>
+
+    </div>
+    
+    <div class='A1 container-fluid row'>
+
+        <div [style.background-color]="A1Color?'rgb(247, 253, 214)':'white'"class=' MainSub   p-1 ' style='border:1px solid black ;'>
+            <div class='container-fluid text-center'>
+                <h2>Maths</h2>
+                <h2>Mock Test </h2>
+            </div>
+            <hr>
+            <div  class='text-center'style="color: rgb(87, 85, 85)">
+                <h3>These are some of the
+                    awsome question to solve,check your skills </h3>
+            </div>
+            <button class='container-fluid  p-auto h-auto btn btn-info ' (click)='backColor("A1")' routerLink='maths'>Select</button>
+        </div>
+
+        <div [style.background-color]="A2Color?'rgb(247, 253, 214)':'white'"class='MainSub     p-1 ' style='border:1px solid black;'>
+            <div class='container-fluid text-center'>
+                <h2>Reasoning</h2>
+                <h2>Mock Test </h2>
+            </div>
+            <hr>
+            <div class='text-center'style="color: rgb(87, 85, 85);">
+                <h3>These are some of the
+                    awsome question to solve,check your skills</h3>
+            </div>
+            <button class='container-fluid  p-auto h-auto btn btn-info '(click)='backColor("A2")' routerLink='reasoning'>Select</button>
+        </div>
+
+    </div>
+    <div class='A3 container-fluid mt-2'>
+        <!-- routerLink='chid/test' -->
+        <div style=" background-color: rgb(247, 253, 214);">
+        <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
