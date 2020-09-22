@@ -1,0 +1,88 @@
+
+
+<style>
+    @media  screen and (max-width: 900px){
+         .azzz{
+         width:330px;;
+         overflow-x:auto;
+         overflow-y: hidden;      
+         height: 350px;
+         white-space: nowrap;
+         margin:auto
+
+    }
+     .a1{display: inline-block;
+         scroll-behavior: smooth;
+         border:1px solid black;
+         width:220px;margin:10px
+
+     }
+    }
+    @media  screen and (min-width: 900px)
+    {
+         .azzz{
+              margin:auto;
+              padding:20px;
+              padding-left:0px;
+              
+         }
+         .a1
+         {
+              border:1px solid black;
+              width:250px;
+              margin-left:150px;  
+              display: inline-block;
+         }
+    }
+</style> <!-- (mouseenter)='QuestSet()' -->
+<div class='azzz container-fluid 'id='as'>
+    <div class='a1 p-1 '>
+         <div class='container-fluid text-center'>
+              <h2>Reasoning</h2>
+              <h2>Mock Test 1</h2>
+         </div>
+         <hr>
+         <div style="color: rgb(107, 106, 106);">
+              <h5>Qouestion 10</h5>
+              <h5> Time 10</h5>
+              <h5>Maximum Marks 15</h5>
+         </div>
+         <button class='container-fluid  p-auto h-auto btn btn-info 'routerLink='chid' (click)="setTestNo('1')">Start Test1</button>
+    </div>
+
+    
+
+   
+    
+
+    <div class='a1 p-1 '>
+         <div class='container-fluid text-center'>
+              <h2>Reasoning</h2>
+              <h2>Mock Test 2</h2>
+         </div>
+         <hr>
+         <div style="color: rgb(107, 106, 106);">
+              <h5>Qouestion 10</h5>
+              <h5> Time 10</h5>
+              <h5>Maximum Marks 15</h5>
+         </div>
+         <button class='container-fluid  p-auto h-auto btn btn-info 'routerLink='chid' (click)="setTestNo('2')">Start Test 2</button>
+    </div>
+
+    <div class='a1 p-1 '>
+         <div class='container-fluid text-center'>
+              <h2>Reasoning</h2>
+              <h2>Mock Test 3</h2>
+         </div>
+         <hr>
+         <div style="color: rgb(107, 106, 106);">
+              <h5>Qouestion 10</h5>
+              <h5> Time 10</h5>
+              <h5>Maximum Marks 15</h5>
+         </div>
+         <button class='container-fluid  p-auto h-auto btn btn-info 'routerLink='chid' (click)="setTestNo('3')">Start Test</button>
+    </div>
+
+
+</div>
+
