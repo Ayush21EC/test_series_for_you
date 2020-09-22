@@ -1,0 +1,96 @@
+<style>
+  @media screen and (max-width: 1800px) and (min-width:770px) {
+    .butt {
+      display: none;
+    }
+
+    #notifi {
+      display: none
+    }
+  }
+
+  @media screen and (max-width: 770px) and (min-width:0px) {
+    .noti {
+      display: none
+    }
+
+  }
+
+  .a1 {
+    overflow-x: hidden;
+    height: 600px;
+    scroll-behavior: smooth;
+  }
+
+  
+</style>
+<div class='container-fluid row mr-0 ' style='position: sticky ;top:0;z-index: +2;'>
+
+  <div class='col-md-2 col-sm-6 col-xs-6'>
+    <button type="button" class="  btn btn-outline-primary btn-rounded waves-effect butt" (click)='toggleQuestNotify()'>Questios</button>
+
+  </div>
+  <div class='col-md-6 col-xs-6  col-sm-6'>
+    <app-clock></app-clock>
+  </div>
+</div>
+<div class='az'>
+  <div class='container-fluid' id='notifi' *ngIf='questNotifi'>
+    <app-question-notify></app-question-notify>
+  </div>
+
+  <div class='row  '>
+    <div class='col-md-8 a1 col-sm-12'>
+      <div *ngFor='let questz of questionbook ;let indexOfelement=index;' class=' container-fluid '
+        style='margin:10px ;border:1px solid green;padding:10px'>
+        <div class='questionsz' style='margin:10px;'>
+          {{indexOfelement+1}}. {{     questz.ques}}
+        </div>
+        <div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{indexOfelement}}" id="1" value="1"
+              (change)="InfoAboutAns(indexOfelement,$event)">
+            <label class="form-check-label" for="1">
+              {{questz.op1}}
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{indexOfelement}}" id="2" value="2"
+              (change)="InfoAboutAns(indexOfelement,$event)">
+            <label class="form-check-label" for="2">
+              {{questz.op2}}
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{indexOfelement}}" id="3" value="3"
+              (change)="InfoAboutAns(indexOfelement,$event)">
+            <label class="form-check-label" for="3">
+              {{questz.op3}}
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{indexOfelement}}" id="4" value="4"
+              (change)="InfoAboutAns(indexOfelement,$event)">
+            <label class="form-check-label" for="4">
+              {{questz.op4}}
+            </label>
+          </div>
+          <div class='container-fluid mt-1 mr-0 '>
+            <button class='btn btn-primary' (click)='markz(indexOfelement)'> Mark</button>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    
+    </div>
+    <div class='col-md-4 noti'>
+
+      <app-question-notify></app-question-notify>
+    </div>
+  </div>
+  <button class='container-fluid  p-auto h-auto btn btn-info 'routerLink='marks' (click)='giveOut()' id="sub">Submit</button>
+
+</div>
